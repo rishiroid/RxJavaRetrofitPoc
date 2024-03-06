@@ -1,15 +1,14 @@
 package net.rishiz.rxjavaretrofitpoc.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import net.rishiz.rxjavaretrofitpoc.databinding.RowHolderBinding;
-
 import net.rishiz.rxjavaretrofitpoc.model.EntriesDTO;
 
 import java.util.ArrayList;
@@ -22,8 +21,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemRowHolder>
 
     public ItemAdapter(List<EntriesDTO> entriesItemList, Context context, ClickInterface clickInterface) {
         this.context = context;
-//        this.entriesItemList=entriesItemList;
-        this.entriesItemList=new ArrayList<>();
         this.entriesItemList.addAll(entriesItemList);
         this.clickInterface = clickInterface;
     }
@@ -34,7 +31,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemRowHolder>
     public ItemRowHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         @NonNull RowHolderBinding view = RowHolderBinding.inflate(inflater, parent, false);
-//        View view= LayoutInflater.from(context).inflate(R.layout.row_holder,parent,false);
         return new ItemRowHolder(view);
     }
 
