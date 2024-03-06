@@ -12,6 +12,7 @@ Android app built with `RxJava` library in java.
 - #Java<br>
 - #Retofit<br>
 - #OkHttp<br>
+- #RxJava3
 - #Viemodel
 - #ViewBinding
 - #DataBinding
